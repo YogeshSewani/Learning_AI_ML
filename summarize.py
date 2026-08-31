@@ -30,4 +30,4 @@ def summarize_website(content):
 if website:
     if button:
         summary = summarize_website(website)
-        st.success.markdown(summary)
+        st.markdown(summary)
