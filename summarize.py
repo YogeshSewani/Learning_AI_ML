@@ -15,6 +15,7 @@ user_prompt_prefix = "Here are the contents of a website. Provide a short summar
 
 st.title("Website Summarizer")
 website = st.text_input("Enter a website URL or text: ")
+button = st.button("Generate Summary")
 
 def summarize_website(content):
     response = client.chat.completions.create(
@@ -27,5 +28,6 @@ def summarize_website(content):
     return response.choices[0].message.content
 
 if website:
-    summary = summarize_website(website)
-    st.markdown(summary)
+    if button:
+        summary = summarize_website(website)
+        st.success.markdown(summary)
