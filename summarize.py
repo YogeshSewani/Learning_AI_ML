@@ -27,8 +27,8 @@ def summarize_website(content):
     )
     return response.choices[0].message.content
 
-if website:
-    if button:
+if button:
+    if website:
         summary = summarize_website(website)
         st.markdown(summary)
     else:
