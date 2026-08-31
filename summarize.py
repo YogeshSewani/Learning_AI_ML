@@ -31,3 +31,5 @@ if website:
     if button:
         summary = summarize_website(website)
         st.markdown(summary)
+    else:
+        st.warning("Please enter the website name")
