@@ -31,7 +31,7 @@ client = OpenAI(
     api_key=api_key
 )
 
-st.title("My Custom Chatbot")
+st.title("Slow Chatbot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
